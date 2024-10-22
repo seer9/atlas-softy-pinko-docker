@@ -7,11 +7,8 @@ RUN apt-get upgrade -y
 
 RUN apt-get install -y python3 python3-pip
 
-# Install Flask using pip3
-RUN pip3 install Flask
-
-# Install Flask-Cors using pip3 as directed
-RUN pip3 install flask-cors
+# Install Flask and cors using pip3 w/o VE
+RUN pip3 install Flask Flask-Cors --break-system-packages
 
 # change working directory and copy contents to the container
 
