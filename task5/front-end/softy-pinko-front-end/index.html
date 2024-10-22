@@ -646,5 +646,18 @@
             });
         });
     </script>
+    <script>
+        // Load dynamic data from the back-end on port 5252
+        $(function() {
+            $.ajax({
+                type: "GET",
+                url: "/api/hello",
+                success: function (data) {
+                    console.log(data);
+                    $('#dynamic-content').text(data);
+                }
+            });
+        });
+    </script>
   </body>
 </html>
